@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malayka Ibrar Dar | DevOps Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#050f08;--g:#00ff6a;--g2:#0a9d43;--tx:#d9ffe6;--mut:#7fae90}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Sora,system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 6vw;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);border-bottom:1px solid #0d2a16}
+nav b{color:var(--g);font-weight:800;letter-spacing:.5px}
+nav div a{margin-left:22px;text-decoration:none;color:var(--mut);font-size:.9rem}
+nav div a:hover{color:var(--g)}
+section{padding:110px 6vw 40px;max-width:1150px;margin:auto}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:28px;text-shadow:0 0 18px rgba(0,255,106,.35)}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:30px;padding-top:90px}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800;line-height:1.02;color:#fff;text-shadow:0 0 30px rgba(0,255,106,.45),3px 3px 0 var(--g2)}
+.hero p{color:var(--mut);max-width:46ch;margin:22px 0 30px;font-weight:300}
+.btn{display:inline-block;padding:13px 26px;border:1px solid var(--g);color:var(--g);text-decoration:none;font-weight:600;margin-right:12px;border-radius:4px;transition:.25s;box-shadow:0 6px 0 var(--g2)}
+.btn:hover{background:var(--g);color:#000;transform:translateY(4px);box-shadow:0 2px 0 var(--g2)}
+.btn.solid{background:var(--g);color:#000}
+/* 3d cube */
+.stage{perspective:900px;height:360px;display:grid;place-items:center}
+.cube{position:relative;width:200px;height:200px;transform-style:preserve-3d;animation:spin 16s linear infinite}
+.stage:hover .cube{animation-play-state:paused}
+.cube span{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:1.5rem;color:var(--g);background:rgba(0,255,106,.06);border:2px solid var(--g);box-shadow:inset 0 0 40px rgba(0,255,106,.25),0 0 25px rgba(0,255,106,.3)}
+.cube span:nth-child(1){transform:translateZ(100px)}
+.cube span:nth-child(2){transform:rotateY(90deg) translateZ(100px)}
+.cube span:nth-child(3){transform:rotateY(180deg) translateZ(100px)}
+.cube span:nth-child(4){transform:rotateY(-90deg) translateZ(100px)}
+.cube span:nth-child(5){transform:rotateX(90deg) translateZ(100px)}
+.cube span:nth-child(6){transform:rotateX(-90deg) translateZ(100px)}
+@keyframes spin{from{transform:rotateX(-20deg) rotateY(0)}to{transform:rotateX(-20deg) rotateY(360deg)}}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;perspective:1000px}
+.card{background:var(--panel);border:1px solid #11381f;border-radius:10px;padding:26px;transform-style:preserve-3d;transition:transform .15s ease-out,box-shadow .3s;box-shadow:0 18px 30px -12px rgba(0,255,106,.18)}
+.card:hover{border-color:var(--g);box-shadow:0 28px 45px -12px rgba(0,255,106,.35)}
+.card h3{color:var(--g);margin-bottom:8px;transform:translateZ(30px)}
+.card p{color:var(--mut);font-size:.92rem;font-weight:300;transform:translateZ(15px)}
+.tags{display:flex;flex-wrap:wrap;gap:12px}
+.tags span{padding:9px 18px;border:1px solid var(--g2);border-radius:4px;color:var(--g);box-shadow:0 4px 0 var(--g2);font-size:.9rem}
+.about{max-width:68ch;color:var(--mut);font-weight:300}
+footer{text-align:center;color:var(--mut);padding:60px 6vw 40px;font-size:.85rem}
+@media(max-width:800px){.hero{grid-template-columns:1fr;text-align:left}.stage{height:300px}nav div a{margin-left:12px}}
+@media(prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-20deg) rotateY(35deg)}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><b>MID</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
+
+<section class="hero" id="top">
+  <div>
+    <h1>Malayka Ibrar Dar</h1>
+    <p>I am learning DevOps and cloud computing. I build and run my own Linux server, manage code with Git, and ship projects with Docker and GitHub.</p>
+    <a class="btn solid" href="https://github.com/malayka-ibrar" target="_blank" rel="noopener">View my GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/malayka-ibrar-dar-a97b53303/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+  <div class="stage" aria-hidden="true">
+    <div class="cube"><span>Git</span><span>Linux</span><span>Docker</span><span>SSH</span><span>GitHub</span><span>DevOps</span></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <p class="about">I study DevOps and cloud computing. I run an Ubuntu server in a virtual machine and work on it from the browser with VS Code. I practise real workflows: fixing merge conflicts, undoing commits safely, and publishing sites.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="tags"><span>Git</span><span>GitHub</span><span>Linux (Ubuntu)</span><span>SSH</span><span>Docker Compose</span><span>VS Code</span><span>HTML and CSS</span></div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card"><h3>Git history lab</h3><p>Solved push conflicts with merge and rebase, resolved conflicts by hand, and used stash, reset, amend, revert and force push.</p></div>
+    <div class="card"><h3>Browser VS Code server</h3><p>Installed code-server on an Ubuntu VM and reached it through a secure SSH tunnel with key login.</p></div>
+    <div class="card"><h3>Gitea with Docker</h3><p>Ran a self-hosted Git service in GitHub Codespaces using Docker Compose.</p></div>
+    <div class="card"><h3>This portfolio</h3><p>A static site hosted free on GitHub Pages.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <a class="btn solid" href="https://github.com/malayka-ibrar" target="_blank" rel="noopener">GitHub</a>
+  <a class="btn" href="https://www.linkedin.com/in/malayka-ibrar-dar-a97b53303/" target="_blank" rel="noopener">LinkedIn</a>
+</section>
+
+<footer>&copy; 2026 Malayka Ibrar Dar</footer>
+
+<script>
+document.querySelectorAll('.card').forEach(function(c){
+  c.addEventListener('mousemove',function(e){
+    var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c.style.transform='rotateY('+(x*18)+'deg) rotateX('+(-y*18)+'deg) translateZ(14px)';
+  });
+  c.addEventListener('mouseleave',function(){c.style.transform=''});
+});
+</script>
+</body>
+</html>
